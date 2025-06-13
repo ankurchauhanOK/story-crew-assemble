@@ -1,23 +1,24 @@
 
 import { Button } from "@/components/ui/button";
 import { Search, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center space-x-8">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg gradient-violet flex items-center justify-center">
               <span className="text-white font-bold text-sm">SC</span>
             </div>
             <span className="font-bold text-xl">StoryCrew</span>
-          </div>
+          </Link>
           
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="#" className="transition-colors hover:text-primary">
+            <Link to="/" className="transition-colors hover:text-primary">
               Explore
-            </a>
+            </Link>
             <a href="#" className="transition-colors hover:text-primary">
               Projects
             </a>
@@ -40,9 +41,11 @@ const Header = () => {
             />
           </div>
           
-          <Button variant="outline" size="sm">
-            <User className="h-4 w-4 mr-2" />
-            Sign In
+          <Button variant="outline" size="sm" asChild>
+            <Link to="/profile">
+              <User className="h-4 w-4 mr-2" />
+              Profile
+            </Link>
           </Button>
           
           <Button size="sm" className="gradient-violet text-white">
