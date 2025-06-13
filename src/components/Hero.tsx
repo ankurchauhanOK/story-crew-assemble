@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-violet/5 via-mint/5 to-warm-yellow/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-violet/10 via-mint/10 to-warm-yellow/10"></div>
       
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
@@ -23,12 +23,12 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Button size="lg" className="gradient-violet text-white px-8 py-3 text-lg">
+              <Button size="lg" className="bg-gradient-to-r from-violet to-mint text-white px-8 py-3 text-lg hover:opacity-90 transition-opacity">
                 <Search className="mr-2 h-5 w-5" />
                 Explore Projects
               </Button>
               
-              <Button size="lg" variant="outline" className="px-8 py-3 text-lg">
+              <Button size="lg" variant="outline" className="px-8 py-3 text-lg border-2">
                 ✍️ Post Your Idea
               </Button>
             </div>
